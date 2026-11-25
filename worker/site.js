@@ -265,7 +265,7 @@ const COPYJS = `<script>{document.querySelectorAll('.cp').forEach(b=>b.addEventL
 
 function layout({ title, desc, content, path }) {
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${esc(title)} · PaidOnChain</title><meta name="description" content="${esc(desc)}"><link rel="canonical" href="${API}${path}">
+<title>${esc(title)} · PaidOnChain</title><meta name="google-site-verification" content="If7w0aQpztlZIafLmAhRgHqRGwtSgjyGRg53bMRwB5o"><meta name="description" content="${esc(desc)}"><link rel="canonical" href="${API}${path}">
 <meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}">
 <style>${CSS}</style></head><body>
 <header><b>PaidOnChain</b><nav><a href="/">Home</a><a href="/docs/quickstart">Quickstart</a><a href="/docs/how-to-verify-usdc-payment">How it works</a><a href="https://github.com/orja12/paidonchain">GitHub</a></nav></header>
