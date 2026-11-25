@@ -7,7 +7,9 @@ export const FREE_PER_MONTH = 100;
 export const CHECKS_PER_USDC = 1000;     // 0.001 USDC per check
 export const MIN_PURCHASE_USDC = "5";
 const KEYS_PER_IP_PER_DAY = 3;
-const P = "poc:";                         // KV key prefix
+const P = "poc:"; // KV key prefix
+// Public IndexNow ownership key (not a secret: search engines fetch it from /<key>.txt)
+const INDEXNOW_KEY = "782ff3c97f920dcafa173369221aed48";
 
 const json = (o, s = 200) => new Response(JSON.stringify(o, null, 2), { status: s, headers: { "content-type": "application/json", "cache-control": "no-store", "access-control-allow-origin": "*" } });
 const err = (code, message, s) => json({ ok: false, code, error: message }, s);
@@ -58,6 +60,7 @@ export default {
       const u = [url.origin + "/", ...DOCS.map(d => `${url.origin}/docs/${d.slug}`)];
       return new Response(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${u.map(x => `<url><loc>${x}</loc></url>`).join("")}</urlset>`, { headers: { "content-type": "application/xml" } });
     }
+    if (req.method === "GET" && path === "/" + INDEXNOW_KEY + ".txt") return new Response(INDEXNOW_KEY, { headers: { "content-type": "text/plain" } });
     if (req.method === "GET" && path === "/robots.txt") return new Response(`User-agent: *\nAllow: /\nSitemap: ${url.origin}/sitemap.xml\n`);
 
     // ---- API ----
