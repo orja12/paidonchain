@@ -1,0 +1,38 @@
+{
+  "name": "paidonchain",
+  "version": "0.1.0",
+  "description": "Verify stablecoin (USDC) payments on-chain in one call. Zero dependencies. No custody, no Stripe.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "usdc",
+    "crypto-payments",
+    "payment-verification",
+    "base",
+    "arbitrum",
+    "stablecoin",
+    "web3",
+    "cloudflare-workers",
+    "eip-681"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orja12/paidonchain.git"
+  },
+  "homepage": "https://paidonchain.alrudaini-omar.workers.dev",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}

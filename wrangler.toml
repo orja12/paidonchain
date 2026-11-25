@@ -1,0 +1,8 @@
+name = "paidonchain"
+main = "worker/index.js"
+compatibility_date = "2026-11-01"
+workers_dev = true
+
+[[kv_namespaces]]
+binding = "KV"
+id = "afe30fe404a048278d283c34d8695d54"   # shared namespace; all keys prefixed "poc:"
