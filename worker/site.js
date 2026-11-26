@@ -28,7 +28,7 @@ PaidOnChain answers one question reliably: **did this transaction really pay thi
 ## Option A: the library (free forever)
 
 \`\`\`bash
-npm install github:orja12/paidonchain
+npm install paidonchain
 \`\`\`
 
 \`\`\`js
@@ -77,7 +77,7 @@ This is the pattern: show the buyer your address and price, they pay from any wa
 ## 1. Install
 
 \`\`\`bash
-npm install github:orja12/paidonchain
+npm install paidonchain
 \`\`\`
 
 ## 2. Server route: app/api/claim/route.js
