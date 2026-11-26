@@ -1,9 +1,11 @@
 # PaidOnChain
 
+[![npm](https://img.shields.io/npm/v/paidonchain)](https://www.npmjs.com/package/paidonchain)
+
 **Verify stablecoin (USDC) payments on-chain in one call.** Zero dependencies, MIT, with no Stripe, no KYC processor and no custody: buyers pay your address directly, and PaidOnChain only *reads* the chain.
 
 ```bash
-npm install github:orja12/paidonchain
+npm install paidonchain
 ```
 
 ```js
